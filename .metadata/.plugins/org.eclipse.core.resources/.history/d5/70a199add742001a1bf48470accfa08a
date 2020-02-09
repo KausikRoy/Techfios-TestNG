@@ -1,0 +1,29 @@
+package practice_1;
+
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PracticeXpath {
+
+	@Test
+
+	public void Addcontact() throws InterruptedException {
+
+		System.setProperty("webdriver.chrome.driver", ".\\driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+
+		driver.get("http://techfios.com/test/billing/?ng=admin/");
+		driver.findElement(By.id("username")).sendKeys("techfiosdemo@google.com");
+		driver.findElement(By.id("password")).sendKeys("abc123");
+		driver.manage().window().maximize();
+		//Thread.sleep(10000);
+
+		
+		///driver.close();
+		//driver.quit();
+
+	}
+
+}
